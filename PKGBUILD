@@ -26,7 +26,7 @@ source=(
 
 sha512sums=(
   'SKIP'
-  '8494263b17c334cf6ec496b0d7be9c7de8162589de9a203396b7af6c88c4f7d65ccd5c81fef30a46e332c487a2ae00abf1bf9ea14b5940d3e6f133a135b0b2ac'
+  'SKIP'
   'SKIP'
 )
 
