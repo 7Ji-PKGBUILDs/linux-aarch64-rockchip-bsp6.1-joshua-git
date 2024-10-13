@@ -20,13 +20,13 @@ _url_git="gitweb-dlagent://${_url}/${_srcname}.git##branch=noble"
 DLAGENTS+=('gitweb-dlagent::/usr/bin/gitweb-dlagent sync %u')
 source=(
   "$_url_git"
-  'localversion.config'
+  'kernel.config'
   "panthor.patch::https://github.com/hbiyik/linux/compare/${_panthor_base}...${_panthor_branch}.patch"
 )
 
 sha512sums=(
   'SKIP'
-  '9ec050e491788b8428395fc28b6d8486d64d314d8b85e97d8df30a35bd7b85d2ed84682e7b2eaed7b471b73aa51119e360761a099719eed9952713e0caba17ce'
+  '8494263b17c334cf6ec496b0d7be9c7de8162589de9a203396b7af6c88c4f7d65ccd5c81fef30a46e332c487a2ae00abf1bf9ea14b5940d3e6f133a135b0b2ac'
   'SKIP'
 )
 
@@ -59,7 +59,7 @@ prepare() {
   patch -p1 -N -i ../panthor.patch
 
   echo "Preparing config..."
-  scripts/kconfig/merge_config.sh -m debian.rockchip/config/config.common.ubuntu ../localversion.config
+  scripts/kconfig/merge_config.sh -m debian.rockchip/config/config.common.ubuntu ../kernel.config
 }
 
 build() {
