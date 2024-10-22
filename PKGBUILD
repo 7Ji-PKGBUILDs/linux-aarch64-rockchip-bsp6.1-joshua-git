@@ -22,9 +22,13 @@ source=(
   "$_url_git"
   'kernel.config'
   "panthor.patch::https://github.com/hbiyik/linux/compare/${_panthor_base}...${_panthor_branch}.patch"
+  "btusb_be200_1.patch::https://github.com/torvalds/linux/commit/999a8a6b2e6ae73d293ff9ca69ec1715e34d6219.patch"
+  "btusb_be200_2.patch::https://github.com/torvalds/linux/commit/bb925bf9fbc1945eafaebc43ad39fb8a096af995.patch"
 )
 
 sha512sums=(
+  'SKIP'
+  'SKIP'
   'SKIP'
   'SKIP'
   'SKIP'
@@ -57,6 +61,8 @@ prepare() {
 
   # based on https://github.com/hbiyik/linux-rockchip/tree/noble-panthor
   patch -p1 -N -i ../panthor.patch
+  patch -p1 -N -i ../btusb_be200_1.patch
+  patch -p1 -N -i ../btusb_be200_2.patch
 
   echo "Preparing config..."
   scripts/kconfig/merge_config.sh -m debian.rockchip/config/config.common.ubuntu ../kernel.config
