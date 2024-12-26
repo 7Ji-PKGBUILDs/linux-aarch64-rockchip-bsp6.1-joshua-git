@@ -3,7 +3,7 @@
 # Contributor: Jat-faan Wong, Guoxin "7Ji" Pu, Joshua-Riek 
 
 _panthor_base=aa54fa4e0712616d44f2c2f312ecc35c0827833d
-_panthor_branch=rk-6.1-rkr3-panthor
+_panthor_branch=linux-6.1-stan-rkr3-panthor
 pkgbase=linux-aarch64-rockchip-bsp6.1-joshua-git
 pkgname=("${pkgbase}"{,-headers})
 pkgver=6.1.43.r1266030.gd3e66fee
