@@ -38,7 +38,7 @@ pkgver() {
     "$(grep '^SUBLEVEL = ' Makefile|awk -F' = ' '{print $2}'|grep -vE '^0$'|sed 's/.*/.\0/')" \
     "$(grep '^EXTRAVERSION = ' Makefile|awk -F' = ' '{print $2}'|tr -d -|sed -E 's/rockchip[0-9]+//')" \
     "$(gitweb-dlagent version ${_url_git} --pattern \{revision\})" \
-    "$(gitweb-dlagent version ${_url_git} --pattern \{commit:.12s\})"
+    "$(gitweb-dlagent version ${_url_git} --pattern \{commit:.8s\})"
 }
 
 prepare() {
