@@ -15,10 +15,10 @@ pkgbase = linux-aarch64-rockchip-bsp6.1-joshua-git
 	options = !strip
 	source = git+https://github.com/Joshua-Riek/linux-rockchip.git#branch=noble
 	source = localversion.config
-	source = panthor.patch::https://github.com/hbiyik/linux/compare/aa54fa4e0712616d44f2c2f312ecc35c0827833d...rk-6.1-rkr3-panthor.patch
+	source = panthor.patch::https://github.com/hbiyik/linux/compare/aa54fa4e0712616d44f2c2f312ecc35c0827833d...linux-6.1-stan-rkr3-panthor.patch
 	sha512sums = SKIP
 	sha512sums = 9ec050e491788b8428395fc28b6d8486d64d314d8b85e97d8df30a35bd7b85d2ed84682e7b2eaed7b471b73aa51119e360761a099719eed9952713e0caba17ce
-	sha512sums = c564ba067af52de0735bfb494d32ecbde70bd317bf0a819a36fa078ab2fd11e83fde6350573f8caa9a88a1c26f59106e6afcf318aaf25ccbc932633d52812538
+	sha512sums = 89161d6da2a5487b3ce520125fd4cd3c03b674c390bab3884fd824caf8cc36186074b696c1295ca3c0f6d14e57bf829a450f1c9faac207788832bfb32872424b
 
 pkgname = linux-aarch64-rockchip-bsp6.1-joshua-git
 	pkgdesc = The linux-rockchip kernel, with patches picked by Joshua Riek focusing on RK3588
